@@ -1,5 +1,5 @@
 # IHS-Block-analysis
-The code for block analysis for EEG data was recorded using Intelligent Hearing System SmartEP, where the user can access individual sweeps, which are used to calculate the averaged waveform. Those individual waveforms can be further analyzed based on user needs, such as filtering, sweep-wise analysis, artifact rejections, smoothing, etc. 
+The block analysis code (analysis.m) is compactable only with EEG data recorded using Intelligent Hearing System SmartEP. The code enables the user to access individual sweeps, which are used to calculate the averaged waveform. These individual waveforms can be further analyzed according to user requirements, such as filtering, sweep-wise analysis, artifact rejections, smoothing, etc. 
 
 ## **Recording parameters:**
     1. Data points: set to max (1024 - Smart EP or 4096 - Advanced research module)
@@ -11,7 +11,7 @@ The code for block analysis for EEG data was recorded using Intelligent Hearing 
 ## **Data export:**
     1. Block-wise data: Averaging -> Export block to ASCII file (Active)  
     2. Averaged data: Data -> Save as ASCII
-The block-wise data expressed in ADC values, which needs to be converted into microvolts using the formula [V = (ADC x Vref)/2^nbits]. 
+The block-wise data is represented in ADC values, which need to be converted to microvolts using the formula [V = (ADC x Vref)/2^nbits]. 
 
-However, the Vref value is unknown and it can be calculated from known microvolt values available in averaged data by simply modifying the equation [Vref = ((volt x 1e5) x 2^nbits)/ADC].
+However, since the Vref is unknown, it can be determined using known microvolt values from the averaged data by rearranging the equation: [Vref = ((volt x 1e5) x 2^nbits)/ADC].
 
